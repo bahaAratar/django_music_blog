@@ -22,7 +22,12 @@ urlpatterns = [
     path('hello/', get_hello),
     path('music/', get_music),
     path('music/create/', post_music),
+    path('music/delete/<str:title>/', delete_music),
     path('music/search/<int:id>/', get_song),
     path('music/search/<str:title>/', get_title),
+    path('music/update/<int:pk>/', update_music),
+
+    path('music/class/', MusicView.as_view()),
+
     
 ]
